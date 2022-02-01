@@ -1,0 +1,307 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    min-width: 768px;
+    max-width: 1280px;
+    background-color: #FAF0E6;
+    font-family: 'monospace' sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calligraffitti', cursive;
+    font-family: 'Luxurious Script', cursive;
+    font-family: 'Readex Pro', sans-serif;
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    width: 0.7rem;
+}
+body::-webkit-scrollbar-track {
+  background: #B2B8C9;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FAF0E6;
+  border-radius: 1rem;
+  border: 3px double #9B95C9; 
+}
+
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #B2B8C9;
+	text-align: center;
+	padding: 0 2em;
+}
+
+/*titre*/
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 1rem;
+    font-family: 'monospace';
+    color: #5282A2;
+}
+/*Animation du curseur*/
+.typewriter h1 {
+    font-family: monospace;
+    overflow: hidden;
+    border-right: auto solid #FAF0E6;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing 4s steps(500, end), 
+        blink-caret .10s step-end;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #FAF0E6 }
+    }
+/*fin du titre*/
+
+.first-space {
+    line-height:30px;
+}
+
+/*Animation du sous-titre*/
+h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+    font-family: 'Bebas Neue', cursive;
+    color: #5282A2;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*transform: translate(-10%, -10%);*/
+    animation: floating 2s linear infinite;
+    margin-top: 60px;
+}
+.box1{
+    background: #B2B8C9;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: bold;
+    transform: perspective(1000px);
+  }
+  .box1:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform: perspective(1000px);
+  }
+  @keyframes floating{
+    0%{
+      transform: translate(-50%, -50%);
+    }
+    50%{
+      transform: translate(-50%, -30%);
+    }
+    100%{
+      transform: translate(-50%, -50%);
+    }
+  }
+/*fin de l'animation*/
+
+/*navigation*/
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: #fff;
+    background: rgba(0, 0, 0, 0.1);
+}
+a {
+    text-decoration: none;
+}
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+		transition: all 0.5s ease;
+		font-size: 0.8rem;
+    background: #9B95C9;
+		transition: all 0.5s ease;
+}
+/*fin de la navigation*/
+
+/*main*/
+h2 {
+    font-size: 1.8rem;
+    font-family: 'Calligraffitti', cursive;
+    margin: 0;
+    color: #5282A2;
+    margin-top: 10px;
+}
+p {
+    color: #5282A2;
+    font-family: 'Readex Pro', sans-serif;
+}
+.et-slide {
+    transition: 0.3s, ease;
+}
+/*Images*/
+img {
+    width: 450px;
+    height: 350px
+}
+.image-box{
+    overflow:hidden;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    align-content: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.image {
+    max-width:50%;
+    height:auto;
+    background-position:center;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+} 
+.image:hover {  
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); 
+    transform: scale(1.2);
+} 
+/*fin des images*/
+/*fin du main*/
+
+/*formulaire*/
+.formulaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+form {
+    height: 490px;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B2B8C9 ;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vw;
+}
+form h1 {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    color: #5282A2;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    margin: 0;
+    margin-bottom: 4vh;
+}
+label {
+    text-align: left !important;
+    color: #5282A2;
+    font-size: 1.7em;
+    margin-top: 2vh;
+    font-family: 'Bebas Neue', cursive;
+}
+input {
+    margin-bottom: 2vh;
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #FAF0E6;
+    border: none;
+    font-size: 1.2em;
+}
+input:focus {
+    outline: none;
+}
+input[type=button] {
+    font-size: 1.5em;
+    color: #FAF0E6;
+    background: #5282A2;
+    margin-bottom: 2vh;
+    width: 37%;
+    height: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+/*fin du formulaire*/
+
+/*mentions légales*/
+footer {
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    width: 860px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+h4 {
+    color: #9B95C9;
+    letter-spacing: 1px;
+}
+.pfoot {
+    font-size: 0.8em;
+}
+.volet-invisible {
+    background-color: #FAF0E6;
+    overflow: hidden;
+    height: 2em;
+    padding: 1em;
+    cursor: pointer;
+}
+.volet-visible {
+    height: 40vh;
+    overflow: hidden;
+}
+/*fin des mentions légales*/
+
+
+
+/*deuxième tentative de volet déroulant*/
+/*.volet-invisible {
+    visibility: hidden;
+}
+.volet-visible {
+    visibility: visible;
+}
+h4 {
+    color: #9B95C9;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    text-align: center; 
+}
+.pfoot {
+    text-align: center;
+    font-size: 0.5em;
+    font-family: 'Bebas Neue', cursive;
+}*/
+/*fin de la deuxième tentative*/
